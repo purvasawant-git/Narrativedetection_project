@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algorithmic Causality Models</title>
+    <!-- Google Fonts for Notebook Aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css?v=1.10">
+</head>
+<body>
+    
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Algorithmic Causality in Financial Narratives.</h1>
+            <p class="subtitle">A personal data science exploration of 6,267 news articles and stock volatility, using Unsupervised Machine Learning and Vector Autoregression.</p>
+        </div>
+    </header>
+
+    <!-- Storytelling Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <h2>The Big Pivot</h2>
+            <p class="lead">My original hypothesis was simple: <i>Does breaking news drive stock market panic?</i></p>
+            <div class="story-grid">
+                <div class="story-card">
+                    <h3>The Expected Pattern</h3>
+                    <p>I assumed negative media narratives would cause immediate drops in the target stock price. I believed the news cycle was the driver of market behavior.</p>
+                </div>
+                <div class="story-card highlight-card">
+                    <h3>What the Data Actually Proved</h3>
+                    <p>After running rigorous **Granger Causality** tests on 156 weeks of aligned data, the results flipped my hypothesis upside down.</p>
+                    <p><strong>Finding:</strong> Stock Volatility Granger-causes Narrative Shifts at a 2-week lag. The news doesn't drive the market. <b>Market fear forces corporate PR to change the news.</b></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology Section -->
+    <section id="methodology" class="methodology-section">
+        <div class="container">
+            <h2>The Engineering Pipeline</h2>
+            <div class="pipeline-flow">
+                <div class="step">
+                    <div class="step-icon">1</div>
+                    <h4>Ingestion</h4>
+                    <p>Scraped 6,267 global articles from GDELT, achieving 98.3% completeness.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">2</div>
+                    <h4>Topic Modeling</h4>
+                    <p>Deployed <b>BERTopic</b> to extract 12 dominant themes autonomously.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">3</div>
+                    <h4>Shift Detection</h4>
+                    <p>Calculated <b>Jensen-Shannon Divergence (JSD)</b> to mathematically quantify narrative pivots.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">4</div>
+                    <h4>Causality</h4>
+                    <p>Synchronized high-dimensional clustering outputs with asset returns to run Vector Autoregression.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact & Innovation Section -->
+    <section id="impact" class="impact-section">
+        <div class="container">
+            <h2>Why This Matters</h2>
+            <div class="impact-grid">
+                
+                <div class="impact-card">
+                    <div class="impact-icon">🧠</div>
+                    <h3>Unsupervised Intelligence</h3>
+                    <p>Most sentiment analysis relies on rigid, manual tagging. This project deployed <span class="highlight">BERTopic Architecture</span> to force the AI to autonomously cluster 6,267 unstructured articles without a single human label.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">📈</div>
+                    <h3>The Predictive Edge</h3>
+                    <p>Standard dashboards only look backward. This project utilizes a <span class="highlight">Vector Autoregression (VAR)</span> statistical engine to prove causality and predict future narrative shifts before they happen.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">💼</div>
+                    <h3>Business Acumen</h3>
+                    <p>Hardcore math is useless if executives can't read it. This project translates complex volatility metrics directly into a <span class="highlight">Real-Time Risk Gauge</span> and an actionable corporate PR playbook.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">🏗️</div>
+                    <h3>End-to-End Engineering</h3>
+                    <p>This is not a disjointed Jupyter Notebook. This project represents a complete, automated pipeline from raw <span class="highlight">GDELT data ingestion</span> and algorithmic processing, all the way to a custom-built, interactive presentation layer.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">🗄️</div>
+                    <h3>Verifiable Ground Truth</h3>
+                    <p>This is not a synthetic dataset. The pipeline queried the massive <span class="highlight">GDELT Global Database</span> to programmatically extract 6,267 authentic news articles, ensuring the algorithms were trained on objective, real-world journalistic reality.</p>
+                </div>
+
+                <div class="impact-card">
+                    <div class="impact-icon">🛡️</div>
+                    <h3>Fault-Tolerant Architecture</h3>
+                    <p>Handling heavy data extraction requires robust infrastructure. The ingestion engine utilizes asynchronous processing and fault-tolerant retry logic to achieve a massive <span class="highlight">98.3% extraction success rate</span> over an unbroken three-year timeline.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Dashboards Hub -->
+    <section id="analytics" class="analytics-section">
+        <div class="container">
+            <h2>The Interactive Data Notebook</h2>
+            
+            <div class="tab-container">
+                <button class="tab-btn active" data-target="dash-quality">1. Data Quality</button>
+                <button class="tab-btn" data-target="dash-media">2. Media Analytics</button>
+                <button class="tab-btn" data-target="dash-volatility">3. Stock Volatility</button>
+                <button class="tab-btn" data-target="dash-topics">4. Topic Evolution</button>
+                <button class="tab-btn" data-target="dash-narrative">5. Narrative Shifts</button>
+                <button class="tab-btn" data-target="dash-calm">6. Calm vs Volatile</button>
+                <button class="tab-btn" data-target="dash-hero">7. The Hero Overlay</button>
+                <button class="tab-btn" data-target="dash-planner">8. PR Planner</button>
+            </div>
+
+            <div class="dashboard-wrapper">
+                
+                <div class="insight-box">
+                    <div class="insight-icon">✍️</div>
+                    <div class="insight-content">
+                        <h4>Researcher's Note</h4>
+                        <p id="insight-text">Select a tab above to explore my findings. Use the dropdown inside each section to filter the data timeline.</p>
+                    </div>
+                </div>
+
+                <!-- 1. Data Quality -->
+                <div id="dash-quality" class="dash-view active">
+                    <div class="dashboard-controls">
+                        <h3>1. GDELT Data Quality</h3>
+                        <div class="local-filter">
+                            <select id="filter-quality" class="dash-filter" data-view="dash-quality" disabled>
+                                <option value="all">Macro Aggregate (All Time)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="kpi-grid" id="quality-kpis"></div>
+                    <div class="multi-graph-grid">
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Top 10 Media Sources</h4>
+                                <ul>
+                                    <li>Identifies the most prolific publishers controlling the corporate narrative.</li>
+                                    <li>Highlights the extreme concentration of media power in top-tier outlets.</li>
+                                    <li>Helps PR teams target the most influential platforms for press releases.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="qualityChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Data Integrity Breakdown</h4>
+                                <ul>
+                                    <li>Visualizes the success rate of our automated web-scraping pipeline.</li>
+                                    <li>Proves the dataset's validity by confirming high full-text extraction rates.</li>
+                                    <li>Ensures our NLP models are analyzing complete articles, not just headlines.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="qualityChartB"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Media Analytics -->
+                <div id="dash-media" class="dash-view">
+                    <div class="dashboard-controls">
+                        <h3>2. Media Source Analytics</h3>
+                        <div class="local-filter">
+                            <select id="filter-media" class="dash-filter" data-view="dash-media" disabled>
+                                <option value="all">Macro Aggregate (All Time)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="multi-graph-grid">
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Share of Voice by Keyword</h4>
+                                <ul>
+                                    <li>Maps the overarching conversational themes dominating the news.</li>
+                                    <li>Reveals which specific keyword groups drive the highest share of voice.</li>
+                                    <li>Allows us to instantly see what the media associates with the corporate brand.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="mediaChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Source Distribution Depth</h4>
+                                <ul>
+                                    <li>Explores the depth of coverage beyond the top 10 mainstream outlets.</li>
+                                    <li>Identifies regional or specialized publishers amplifying the corporate story.</li>
+                                    <li>Shows how far the PR narrative reaches into secondary media tiers.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="mediaChartB"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Stock Volatility -->
+                <div id="dash-volatility" class="dash-view">
+                    <div class="dashboard-controls">
+                        <h3>3. Stock Volatility</h3>
+                        <div class="local-filter">
+                            <select id="filter-volatility" class="dash-filter" data-view="dash-volatility">
+                                <option value="all">All Time (156 Weeks)</option><option value="2025">Year 2025</option><option value="2024">Year 2024</option><option value="2023">Year 2023</option><option value="last52">Last 12 Months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="multi-graph-grid three-charts">
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Asset Returns vs Market Volatility</h4>
+                                <ul>
+                                    <li>Overlays the 4-week rolling volatility trend against weekly stock returns.</li>
+                                    <li>Demonstrates that extreme price swings do not always mean negative returns.</li>
+                                    <li>Sets the foundational financial timeline for our causality tests.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="volatilityChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Asset Returns vs Market Baseline</h4>
+                                <ul>
+                                    <li>Benchmarks the asset's exact performance against the broader market index.</li>
+                                    <li>Proves whether the asset was reacting to macro-economic forces or isolated internal events.</li>
+                                    <li>Confirms if the stock overperformed or underperformed during crisis weeks.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="volatilityChartB"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Market State Timeline</h4>
+                                <ul>
+                                    <li>Translates complex math into three clear regimes: Calm, Warning, and Crisis.</li>
+                                    <li>Visually maps exactly when the market flipped into a state of severe panic.</li>
+                                    <li>Provides a simple historical timeline for non-financial stakeholders to read.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper" style="height: 250px;"><canvas id="volatilityChartC"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Topic Evolution -->
+                <div id="dash-topics" class="dash-view">
+                    <div class="dashboard-controls">
+                        <h3>4. Topic Evolution</h3>
+                        <div class="local-filter">
+                            <select id="filter-topics" class="dash-filter" data-view="dash-topics">
+                                <option value="all">All Time (156 Weeks)</option><option value="2025">Year 2025</option><option value="2024">Year 2024</option><option value="2023">Year 2023</option><option value="last52">Last 12 Months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="multi-graph-grid three-charts">
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Market Dominance</h4>
+                                <ul>
+                                    <li>Displays the fierce competition between semantic topics over time.</li>
+                                    <li>Shows how a single crisis topic can suddenly consume the entire media ecosystem.</li>
+                                    <li>Highlights the incredibly short lifecycle of breaking news narratives before they fade.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="topicsChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>The Apex Topic Trajectory</h4>
+                                <ul>
+                                    <li>Isolates the single most dominant news theme for clear tracking.</li>
+                                    <li>Reveals the exact week the topic peaked in overwhelming public interest.</li>
+                                    <li>Shows the natural decay rate of the corporate story as the media moves on.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="topicsChartB"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Topic Volatility Matrix</h4>
+                                <ul>
+                                    <li>Uses bubble size to indicate the severe intensity and weight of specific themes.</li>
+                                    <li>Maps out which weeks suffered from a barrage of overlapping crisis topics.</li>
+                                    <li>Provides a holistic heat-map of human attention and media saturation.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper" style="height: 300px;"><canvas id="topicsChartC"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Narrative Shifts -->
+                <div id="dash-narrative" class="dash-view">
+                    <div class="dashboard-controls">
+                        <h3>5. Narrative Shift Index</h3>
+                        <div class="local-filter">
+                            <select id="filter-narrative" class="dash-filter" data-view="dash-narrative">
+                                <option value="all">All Time (156 Weeks)</option><option value="2025">Year 2025</option><option value="2024">Year 2024</option><option value="2023">Year 2023</option><option value="last52">Last 12 Months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="multi-graph-grid">
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>JSD Spike Detection</h4>
+                                <ul>
+                                    <li>Plots the Jensen-Shannon Divergence score to mathematically quantify semantic shifts.</li>
+                                    <li>The orange dots mathematically confirm the exact weeks the narrative suddenly broke.</li>
+                                    <li>Proves that PR changes are measurable, sudden, and distinct from normal news.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="narrativeChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Smoothed Narrative Trend</h4>
+                                <ul>
+                                    <li>Applies a 7-week rolling average to remove chaotic weekly media noise.</li>
+                                    <li>Exposes the underlying, long-term macro trend of the corporate PR cycle.</li>
+                                    <li>Helps executives see the big picture rather than reacting to a single day's news.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="narrativeChartB"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Calm vs Volatile -->
+                <div id="dash-calm" class="dash-view">
+                    <div class="dashboard-controls">
+                        <h3>6. Calm vs Volatile Topics</h3>
+                        <div class="local-filter">
+                            <select id="filter-calm" class="dash-filter" data-view="dash-calm" disabled>
+                                <option value="all">Macro Aggregate (All Time)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="multi-graph-grid">
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>The Crisis Multipliers</h4>
+                                <ul>
+                                    <li>Compares topic weights during normal market weeks versus extreme panic weeks.</li>
+                                    <li>Reveals exactly which narratives the media pivots to when the stock drastically drops.</li>
+                                    <li>Proves that financial fear fundamentally alters journalistic focus.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="calmChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Volatility Sensitivity Radar</h4>
+                                <ul>
+                                    <li>Maps the structural "shape" of the news ecosystem across the 8 key semantic themes.</li>
+                                    <li>The distended purple polygon visually represents how panic severely warps the media narrative.</li>
+                                    <li>Shows that crisis PR is not just "more news", but a completely different type of news.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="calmChartB"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 7. Hero Overlay -->
+                <div id="dash-hero" class="dash-view">
+                    <div class="dashboard-controls">
+                        <h3>7. The Granger Causality Overlay</h3>
+                        <div class="local-filter">
+                            <select id="filter-hero" class="dash-filter" data-view="dash-hero">
+                                <option value="all">All Time (156 Weeks)</option><option value="2025">Year 2025</option><option value="2024">Year 2024</option><option value="2023">Year 2023</option><option value="last52">Last 12 Months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="multi-graph-grid">
+                        <div class="graph-card" style="grid-column: 1 / -1;">
+                            <div class="graph-info">
+                                <h4>The Lag Overlay</h4>
+                                <ul>
+                                    <li>The flagship visual proving our core hypothesis using Granger Causality testing.</li>
+                                    <li>Demonstrates how Stock Volatility (teal) consistently spikes before Narrative Shifts (purple).</li>
+                                    <li>Conclusively proves that the market forces the PR response, not the other way around.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="heroChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card" style="grid-column: 1 / -1;">
+                            <div class="graph-info">
+                                <h4>Correlation Scatter Map</h4>
+                                <ul>
+                                    <li>Directly maps the raw mathematical correlation between market panic and media pivots.</li>
+                                    <li>Dots in the upper-right quadrant represent simultaneous extreme fear and extreme PR shifts.</li>
+                                    <li>Provides the undeniable mathematical backing to our visual lag timeline.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper" style="height: 350px;"><canvas id="heroChartB"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. PR Planner -->
+                <div id="dash-planner" class="dash-view">
+                    <div class="dashboard-controls">
+                        <h3>8. Dynamic PR News Planner</h3>
+                        <div class="local-filter">
+                            <select id="filter-planner" class="dash-filter" data-view="dash-planner">
+                                <option value="all">All Time (156 Weeks)</option><option value="2025">Year 2025</option><option value="2024">Year 2024</option><option value="2023">Year 2023</option><option value="last52">Last 12 Months</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="kpi-grid" id="planner-kpis"></div>
+                    <div class="multi-graph-grid three-charts">
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Current Risk Gauge</h4>
+                                <ul>
+                                    <li>Translates current market data into a real-time risk meter for Communications teams.</li>
+                                    <li>Warns PR executives when the market enters a high-volatility "Spike" danger threshold.</li>
+                                    <li>Dictates which specific PR Playbook should be deployed today to handle the crisis.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="plannerChartA"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Historical Volatility Z-Scores</h4>
+                                <ul>
+                                    <li>Tracks the standardized severity of market panic over the entire financial timeline.</li>
+                                    <li>Shows exactly how often the Z-Score breached the critical 1.0 danger zone.</li>
+                                    <li>Provides deep historical context to ground the current Risk Gauge reading.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper"><canvas id="plannerChartB"></canvas></div>
+                        </div>
+                        <div class="graph-card">
+                            <div class="graph-info">
+                                <h4>Model Verification Trajectory</h4>
+                                <ul>
+                                    <li>Plots the model's Predicted JSD directly against the Actual observed JSD.</li>
+                                    <li>Visually verifies the accuracy of the Vector Autoregression forecasting model over time.</li>
+                                    <li>Builds executive trust by proving the math actually works in the real world.</li>
+                                </ul>
+                            </div>
+                            <div class="graph-canvas-wrapper" style="height: 250px;"><canvas id="plannerChartC"></canvas></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <h3>Let's Connect</h3>
+                <p>This project was built to explore the fascinating intersection of Computational Linguistics, Machine Learning, and Financial Markets.</p>
+                <div class="social-links">
+                    <a href="https://github.com/purvasawant-git" target="_blank" class="social-btn">🔗 View on GitHub</a>
+                    <a href="" target="_blank" class="social-btn">💼 Connect on LinkedIn</a>
+                </div>
+                <p class="copyright">&copy; 2026 Poorva Sawant. Built with passion and data.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Application Logic -->
+    <script src="js/app.js?v=1.7"></script>
+    <script src="js/charts.js?v=1.7"></script>
+</body>
+</html>

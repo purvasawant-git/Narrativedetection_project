@@ -1,0 +1,492 @@
+:root {
+    /* Human-Made Notebook Palette */
+    --bg-paper: #F9F6F0; /* Warm off-white paper */
+    --bg-white: #FFFFFF;
+    --text-main: #2C2C2C; /* Graphite pencil dark */
+    --text-ink: #1F3B4D; /* Fountain pen blue/black */
+    --text-muted: #6B655C;
+    
+    /* User-Selected Enterprise Palette (Swapped Green/Orange) */
+    --accent-teal: #038387; 
+    --accent-sage: #CA5010;
+    --accent-purple: #4052AB;
+    --accent-orange: #407855;
+    --accent-highlighter: rgba(202, 80, 16, 0.15); /* Soft orange highlight */
+    
+    --border-pencil: rgba(44, 44, 44, 0.15);
+    
+    /* Hand-drawn box effect */
+    --border-radius-organic: 2px 255px 3px 25px / 255px 5px 225px 3px;
+    --shadow-soft: 2px 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-paper);
+    /* Subtle paper texture using CSS gradient */
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,0,0,0.01) 1px, transparent 1px);
+    background-size: 20px 20px;
+    
+    color: var(--text-main);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-ink);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Header & Storytelling */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--text-ink);
+}
+
+.hero .subtitle {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    margin-bottom: 3rem;
+    font-weight: 400;
+}
+
+/* Organic Story Cards */
+.story-section {
+    padding: 2rem 0;
+}
+
+.story-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.story-section .lead {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1.5rem;
+}
+
+.story-card {
+    padding: 2rem;
+    background: var(--bg-white);
+    border-radius: var(--border-radius-organic);
+    border: 2px solid var(--border-pencil);
+    box-shadow: 4px 6px 0px rgba(0,0,0,0.02); /* Offset shadow for notebook feel */
+}
+
+.story-card h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--text-ink);
+}
+
+.highlight-card {
+    background: var(--bg-paper);
+    border: 3px solid var(--text-ink);
+    box-shadow: 6px 8px 0px rgba(31, 59, 77, 0.1);
+}
+
+/* Methodology */
+.methodology-section {
+    padding: 3rem 0;
+}
+
+.methodology-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.pipeline-flow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.step {
+    background: var(--bg-white);
+    padding: 2rem;
+    border-radius: var(--border-radius-organic);
+    border: 1px dashed var(--border-pencil);
+    text-align: center;
+}
+
+.step-icon {
+    width: 45px;
+    height: 45px;
+    background: var(--text-ink);
+    color: var(--bg-paper);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    margin: 0 auto 1.5rem auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+}
+
+/* Impact & Innovation Section */
+.impact-section {
+    padding: 3rem 0;
+    background: var(--bg-white);
+    border-top: 2px dashed var(--border-pencil);
+    border-bottom: 2px dashed var(--border-pencil);
+}
+
+.impact-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.impact-card {
+    background: var(--bg-paper);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius-organic);
+    border: 2px solid var(--text-ink);
+    text-align: center;
+    box-shadow: 6px 8px 0px rgba(31, 59, 77, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.impact-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--accent-purple);
+}
+
+.impact-card p {
+    color: var(--text-main);
+    font-size: 1.1rem;
+}
+
+.impact-card .highlight {
+    font-weight: 600;
+    color: var(--accent-orange);
+}
+
+/* Analytics Hub */
+.analytics-section {
+    padding: 2rem 0 4rem 0;
+}
+
+.analytics-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* Notebook Tabs */
+.tab-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--border-pencil);
+    padding-bottom: 0.5rem;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    color: var(--text-muted);
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn:hover {
+    color: var(--text-ink);
+}
+
+.tab-btn.active {
+    color: var(--text-ink);
+    border-bottom: 3px solid var(--accent-orange);
+    font-weight: 600;
+}
+
+/* Localized Dashboard Controls */
+.dashboard-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-white);
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius-organic);
+    border: 1px dashed var(--border-pencil);
+    margin-bottom: 1.5rem;
+}
+
+.dashboard-controls h3 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.local-filter select {
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    border: 1px solid var(--text-ink);
+    background: var(--bg-paper);
+    color: var(--text-ink);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Handwritten Insight Box */
+.insight-box {
+    display: flex;
+    gap: 1.5rem;
+    background: var(--bg-white);
+    padding: 1.5rem;
+    border-radius: var(--border-radius-organic);
+    border: 1px solid var(--border-pencil);
+    margin-bottom: 1.5rem;
+    align-items: flex-start;
+    box-shadow: 3px 4px 0px rgba(0,0,0,0.02);
+}
+
+.insight-icon {
+    font-size: 2rem;
+    opacity: 0.8;
+}
+
+.insight-content h4 {
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.insight-content p {
+    font-family: 'Inter', sans-serif; 
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--text-ink);
+    line-height: 1.5;
+}
+
+/* Dashboard Views & Grids */
+.dash-view {
+    display: none;
+    animation: fadeIn 0.4s ease;
+}
+
+.dash-view.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.kpi-card {
+    background: var(--bg-white);
+    padding: 1rem;
+    border-radius: var(--border-radius-organic);
+    text-align: center;
+    border: 1px solid var(--border-pencil);
+}
+
+.kpi-value {
+    font-size: 2.2rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--text-ink);
+    margin-top: 0.2rem;
+}
+
+.multi-graph-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+/* Removed forced two-column layout so charts can expand fully */
+
+.graph-card {
+    background: var(--bg-white);
+    border-radius: var(--border-radius-organic);
+    border: 1px solid var(--border-pencil);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 2px 3px 0px rgba(0,0,0,0.02);
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+}
+
+.graph-card:hover {
+    transform: scale(1.03);
+    box-shadow: 12px 16px 30px rgba(31, 59, 77, 0.12);
+    z-index: 10;
+}
+
+.graph-info {
+    padding: 1rem 1.5rem;
+    background: var(--bg-paper);
+    border-bottom: 1px dashed var(--border-pencil);
+}
+
+.graph-info h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    color: var(--text-ink);
+    margin-bottom: 0.2rem;
+}
+
+.graph-info p, .graph-info ul {
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.graph-info ul {
+    padding-left: 1.2rem;
+    margin-top: 0.3rem;
+    list-style-type: disc;
+}
+
+.graph-info li {
+    margin-bottom: 0.2rem;
+}
+
+.graph-canvas-wrapper {
+    padding: 1rem;
+    flex: 1;
+    min-height: 300px;
+    position: relative;
+}
+
+/* Footer Section */
+.site-footer {
+    padding: 4rem 0;
+    background: var(--bg-paper);
+    border-top: 2px dashed var(--border-pencil);
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.site-footer h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--text-ink);
+}
+
+.site-footer p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--bg-white);
+    color: var(--text-ink);
+    text-decoration: none;
+    border: 2px solid var(--border-pencil);
+    border-radius: var(--border-radius-organic);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    box-shadow: 3px 4px 0px rgba(0,0,0,0.02);
+    transition: all 0.2s ease;
+}
+
+.social-btn:hover {
+    background: var(--text-ink);
+    color: var(--bg-white);
+    transform: translateY(-3px);
+    box-shadow: 4px 6px 0px rgba(0,0,0,0.1);
+}
+
+.site-footer .copyright {
+    font-size: 1rem;
+    font-family: 'Patrick Hand', cursive;
+    margin-bottom: 0;
+}

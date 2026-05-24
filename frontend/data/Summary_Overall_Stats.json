@@ -1,0 +1,26 @@
+[
+  {
+    "Metric":"total_articles",
+    "Value":6267
+  },
+  {
+    "Metric":"first_article_date",
+    "Value":"2023-01-01 02:30:00"
+  },
+  {
+    "Metric":"last_article_date",
+    "Value":"2026-01-01 15:30:00"
+  },
+  {
+    "Metric":"median_words",
+    "Value":471
+  },
+  {
+    "Metric":"pct_missing_content",
+    "Value":1.7073559917
+  },
+  {
+    "Metric":"pct_short_articles",
+    "Value":5.3454603479
+  }
+]
