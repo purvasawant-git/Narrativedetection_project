@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+.env
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# IDEs
+.vscode/
+.idea/
+
+# Large Data Files & Databases
+data/*.parquet
+data/*.duckdb
+data/*.duckdb.wal
+data/*.xlsx
+
+# Logs & Scratch
+logs/
+scratch/
+dashboard_guide_temp.txt
