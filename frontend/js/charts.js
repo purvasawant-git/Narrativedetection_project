@@ -1,23 +1,23 @@
 // Global chart instances to destroy before re-rendering
 const charts = {};
 
-// User-Selected Enterprise Palette (Swapped Green/Orange)
+// Quant Terminal Palette
 const COLORS = {
-    ink: '#1F3B4D',
-    purple: '#4052AB', // Indigo
-    teal: '#038387', // Teal
-    sage: '#CA5010', // Swapped
-    orange: '#407855', // Swapped
-    paper: '#F9F6F0',
-    pencil: 'rgba(44,44,44,0.15)',
-    highlighter: 'rgba(202, 80, 16, 0.15)',
-    palette: ['#038387', '#CA5010', '#4052AB', '#407855', '#A4262C', '#0078D4', '#40587C', '#8764B8']
+    ink: 'rgba(255,255,255,0.2)', // Soft white for borders
+    purple: '#B388FF', // Bright purple for dark mode
+    teal: '#00E5FF', // Cyan
+    sage: '#00E676', // Terminal Green
+    orange: '#FF3D00', // Warning Red/Orange
+    paper: '#0B0F19', // Dark base
+    pencil: 'rgba(255,255,255,0.05)', // Extremely subtle grid
+    highlighter: 'rgba(0, 230, 118, 0.1)', // Green glow
+    palette: ['#00E5FF', '#00E676', '#B388FF', '#FF3D00', '#FFC400', '#F50057', '#651FFF', '#00B0FF']
 };
 
-Chart.defaults.color = '#6B655C'; // text-muted
-Chart.defaults.font.family = "'Inter', sans-serif";
+Chart.defaults.color = '#9CA3AF'; // text-muted
+Chart.defaults.font.family = "'JetBrains Mono', monospace";
 
-// Notebook styling for gridlines
+// Sharp styling for gridlines
 Chart.defaults.scale.grid.color = COLORS.pencil;
 Chart.defaults.scale.grid.tickColor = COLORS.pencil;
 Chart.defaults.elements.line.borderCapStyle = 'round';
