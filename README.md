@@ -7,7 +7,7 @@ I wanted to prove this mathematically. My initial hypothesis was simple: **If I 
 
 To test this, I built an automated pipeline to ingest over 6,200 global news articles spanning three years. The goal was to quantify the exact moments a corporate narrative "shifted," align those shifts against hard stock market volatility metrics, and prove that the news caused the market panic.
 
-## Deployment link : financialnarrativesmedia.vercel.app
+## Deployment link : https://financialnarrativesmedia.vercel.app/
 
 ## The Pivot: How The Project Unfolded
 The project unfolded in four distinct engineering phases to ensure no data was fabricated and the math was rigorous:
